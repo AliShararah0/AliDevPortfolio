@@ -179,13 +179,15 @@ body {
   border-radius: 20%;
   color: white;
   font-size: 24px;
-  margin: 40px 8px 10px 8px;
+  margin: 10px 8px 10px 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   background-color: #a4a6a8; /* default background */
 }
 
-/* Social buttons hover */
+
+
+ 
 .btn-social.linkedin:hover {
   background-color: #004182;
 }
@@ -451,14 +453,20 @@ body {
   border: 1.5px solid transparent;
 }
 
-/* Hover animation */
-.social-link:hover,
-.social-link:focus {
+
+.social-link:hover {
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 65, 130, 0.2);
+}
+
+.social-link:active {
   transform: translateY(-4px);
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(0, 65, 130, 0.25);
-  outline: none;
+  box-shadow: 0 6px 14px rgba(0, 65, 130, 0.4);
+}
+
+.social-link:focus {
+  outline: none; /* optional: remove the dotted focus outline */
 }
 
 /* Facebook */
@@ -467,19 +475,19 @@ body {
   box-shadow: 0 4px 14px rgba(15, 82, 186, 0.5);
 }
 
-/* LinkedIn */
+
 .social-link.linkedin:hover {
   background-color: #004182;
   box-shadow: 0 4px 14px rgba(0, 65, 130, 0.5);
 }
 
-/* GitHub */
+
 .social-link.github:hover {
   background-color: #000;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive footer adjustments */
+
 @media (max-width: 600px) {
   .footer-content {
     flex-direction: column;
